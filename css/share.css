@@ -11,6 +11,7 @@ html, body {
   line-height: 1.42857143;
   color: #333;
   background-color: #f0f0f0;
+  overflow-y: auto;
 }
 .clear{
   clear: both;
