@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title></title>
+  <link rel="stylesheet" href="css/share.css">
+  <link rel="stylesheet" href="css/runningdetail.css">
+</head>
+<body>
+<div class="share-header share-header-linear">
+  <div class="share-time">2016-3-28 21:22</div>
+  <div class="share-portrait-wrap">
+    <div class="share-portrait">
+      <img src="./images/drawable-xhdpi/1.jpg">
+    </div>
+    <div class="share-nickname-wrap">
+      <span class="share-nickname">JR杨</span>
+    </div>
+  </div>
+  <div class="running-level">初级跑者<span>35.7/50</span>公里</div>
+</div>
+<div class="container">
+  <div class="share-content-wrap">
+    <div class="runningRecord-barChart-title">
+      <hr>
+      <div>配速表</div>
+      <hr>
+    </div>
+    <div class="runningRecord-barChart-wrap">
+      <div class="runningRecord-lengend">
+        <ul class="runningRecord-lengend-ul">
+          <li>
+            <div class="runningRecord-lengend-react runningRecord-lengend-fastest"></div>
+            <div class="runningRecord-lengend-text">最快配速</div>
+          </li>
+          <li>
+            <div class="runningRecord-lengend-react runningRecord-lengend-lowest"></div>
+            <div class="runningRecord-lengend-text">最慢配速</div>
+          </li>
+        </ul>
+      </div>
+      <div class="datacenter-bar">
+        <canvas id="detailChart">Your browser does not support HTML5 Canvas
+        </canvas>
+      </div>
+    </div>
+  </div>
+
+  <div class="runningRecord-barChart-title">
+    <hr>
+    <div>详细数据</div>
+    <hr>
+  </div>
+  <div class="runningRecord-detail-pane">
+    <div class="runningRecord-detail-list runningRecord-bordTop">
+      <div class="runningRecord-detail-item runningRecord-bordRight">
+        <div class="runningRecord-detail-long">
+          <img class="runningRecord-detail-icon" src="images/running/icon_watch-interface.png">
+          <div class="runningRecord-detail-time">43:18</div>
+        </div>
+        <div class="clear runningRecord-info-title">
+          跑步时长
+        </div>
+      </div>
+      <div class="runningRecord-detail-item">
+        <div class="runningRecord-detail-long">
+          <img class="runningRecord-detail-icon" src="images/running/target-setting.png">
+          <div class="runningRecord-detail-time">5.85<div class="runningDetail_unit">公里</div></div>
+        </div>
+        <div class="clear runningRecord-info-title">
+          跑步距离
+        </div>
+      </div>
+    </div>
+    <div class="clear runningRecord-detail-list runningRecord-bordTop">
+      <div class="runningRecord-detail-item runningRecord-bordRight">
+        <div class="runningRecord-detail-long">
+          <img class="runningRecord-detail-icon" src="images/running/icon_watch-interface.png">
+          <div class="runningRecord-detail-time">7'12"</div>
+        </div>
+        <div class="clear runningRecord-info-title">
+          平均配速
+        </div>
+      </div>
+      <div class="runningRecord-detail-item">
+        <div class="runningRecord-detail-long">
+          <img class="runningRecord-detail-icon" src="images/running/icon_watch-interface.png">
+          <div class="runningRecord-detail-time">263<div class="runningDetail_unit">大卡</div></div>
+        </div>
+        <div class="clear runningRecord-info-title">
+          消耗热量
+        </div>
+      </div>
+    </div>
+    <div class="clear runningRecord-detail-list runningRecord-bordTop">
+      <div class="runningRecord-detail-item runningRecord-bordRight">
+        <div class="runningRecord-detail-long">
+          <img class="runningRecord-detail-icon" src="images/running/icon_home_heart.png">
+          <div class="runningRecord-detail-time">176<div class="runningDetail_unit">次/分</div></div>
+        </div>
+        <div class="clear runningRecord-info-title">
+          最高心率
+        </div>
+      </div>
+      <div class="runningRecord-detail-item">
+        <div class="runningRecord-detail-long">
+          <img class="runningRecord-detail-icon" src="images/running/icon_home_heart.png">
+          <div class="runningRecord-detail-time">148<div class="runningDetail_unit">次/分</div></div>
+        </div>
+        <div class="clear runningRecord-info-title">
+          平均心率
+        </div>
+      </div>
+    </div>
+    <div class="clear runningRecord-detail-list runningRecord-bordTop runningRecord-bordBottom">
+      <div class="runningRecord-detail-item runningRecord-bordRight">
+        <div class="runningRecord-detail-long">
+          <img class="runningRecord-detail-icon" src="images/running/icon_home_steps.png">
+          <div class="runningRecord-detail-time">5847<div class="runningDetail_unit">步</div></div>
+        </div>
+        <div class="clear runningRecord-info-title">
+          累积步数
+        </div>
+      </div>
+      <div class="runningRecord-detail-item">
+        <div class="runningRecord-detail-long">
+          <img class="runningRecord-detail-icon" src="images/running/icon_home_steps.png">
+          <div class="runningRecord-detail-time">167<div class="runningDetail_unit">步/分</div></div>
+        </div>
+        <div class="clear runningRecord-info-title">
+          频率
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--<div class="share-footer-wrap">-->
+    <!--<div class="share-footer">-->
+      <!--<img id="knowMore" class="share-footer-btn" src="./images/drawable-xhdpi/bottom_btn.png">-->
+    <!--</div>-->
+  <!--</div>-->
+</div>
+<script src="./js/jquery-2.1.3.min.js"></script>
+<script src="./js/yiger-canvas.js"></script>
+<script src="./js/runningdetail.js"></script>
+</body>
+</html>

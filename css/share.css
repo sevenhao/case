@@ -86,8 +86,12 @@ ul, menu, dir {
   margin-left: auto;
 }
 .share-portrait img{
-  width: 100%;
   display: block;
+  width: 90px;
+  height: 90px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
 }
 .share-nickname-wrap{
   margin-top: 15px;

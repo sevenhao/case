@@ -1,0 +1,239 @@
+/**
+ * Created by qhao on 2016/5/3.
+ */
+.share-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.share-time {
+  padding: 15px 20px 10px;
+  font-size: 13px;
+  color: #ffffff;
+  line-height: 18px;
+  text-align: center;
+}
+.running-level{
+  padding: 15px 20px 10px;
+  font-size: 13px;
+  color: #ffffff;
+  line-height: 18px;
+  text-align: center;
+}
+.running-level span{
+  margin:0 5px 0 10px;
+}
+.share-nickname {
+  background: transparent;
+}
+body{
+  background-color: #ffffff;
+}
+.container {
+  padding-bottom: 20px;
+  margin-top: 220px;
+}
+.runningRecord-barChart-title{
+  /*margin: 0 5px;*/
+  height: 40px;
+  line-height:40px;
+  margin-bottom: -10px;
+  font-size: 13px;
+  color: #4D4D4D;
+}
+.runningRecord-barChart-title hr{
+  width: 38%;
+  display: inline-block;
+  color: #D1D1D1;
+  background: #D1D1D1;
+  border:0;
+  height:1px;
+}
+.runningDetail_unit{
+  display: inline-block;
+  font-size: 12px;
+  margin-left: 3px;
+  color: #4D4D4D;
+}
+.runningRecord-barChart-title div{
+  width: 20%;
+  display: inline-block;
+  text-align: center;
+}
+.runningRecord-barChart-wrap{
+  height: 252px;
+  background: #ffffff;
+  padding: 10px 5px 0;
+}
+.runningRecord-barChart-time{
+  text-align: center;
+  width: 100%;
+  font-size: 13px;
+  color: #4D4D4D;
+}
+
+.runningRecord-lengend{
+  width:100%;
+  margin-top: 5px;
+}
+
+.runningRecord-lengend-ul{
+  width: 50%;
+  font-size: 10px;
+}
+.runningRecord-lengend-ul li{
+  float: left;
+  margin-left: 20px;
+  height: 10px;
+  line-height: 10px;
+}
+.runningRecord-lengend-wrap{
+  float: left;
+}
+.runningRecord-lengend-react{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+}
+.runningRecord-lengend-text{
+  display: inline-block;
+  height: 10px;
+  font-size: 10px;
+  color: #4D4D4D;
+}
+
+/*步数图例*/
+.runningRecord-lengend-lowest{
+  background: rgba(248,183,38,1);
+}
+.runningRecord-lengend-fastest{
+  background:rgba(135,209,55,1);
+}
+
+.runningRecord-detail-pane{
+  margin-top: 15px;
+  background: #ffffff;
+  height: 300px;
+}
+.runningRecord-detail-list{
+  height: 25%;
+  border-right: 1px solid #D1D1D1;
+  border-left: 1px solid #D1D1D1;
+}
+.runningRecord-detail-item{
+  float: left;
+  height: 100%;
+  width: 50%;
+  padding:20px 0 0 20px;
+}
+.runningRecord-bordTop{
+  border-top: 1px solid #D1D1D1;
+}
+.runningRecord-bordBottom{
+  border-bottom: 1px solid #D1D1D1;
+}
+.runningRecord-bordLeft{
+  border-left: 1px solid #D1D1D1;
+}
+.runningRecord-bordRight{
+  border-right: 1px solid #D1D1D1;
+}
+.runningRecord-detail-icon{
+  float: left;
+  width: 17px;
+  height: 17px;
+  margin:0 10px 0 0;
+
+}
+.runningRecord-detail-time{
+  float: left;
+  font-size: 20px;
+  height: 23px;
+  line-height: 23px;
+  color: #39BA9C;
+}
+.runningRecord-info-title{
+  font-size: 13px;
+  height: 23px;
+  line-height: 23px;
+  color: #4D4D4D;
+}
+@media (min-device-width : 320px) and (min-device-height: 520px){
+  .runningRecord-barChart-wrap{
+    height: 212px;
+  }
+  .runningRecord-detail-pane{
+    height: 252px;
+  }
+}
+@media (min-device-width : 320px) and (min-device-height: 568px){
+  .runningRecord-barChart-wrap{
+    height: 230px;
+  }
+  .runningRecord-detail-pane{
+    height: 275px;
+  }
+}
+@media (min-device-width : 360px) and (min-device-height: 621px) and (max-device-height: 640px){
+  .runningRecord-barChart-wrap{
+    height: 260px;
+  }
+  .runningRecord-detail-pane{
+    height: 303px;
+  }
+}
+
+/*iphone 6*/
+@media (min-device-width : 375px) and (min-device-height: 627px){
+  .runningRecord-barChart-wrap{
+    height: 255px;
+  }
+  .runningRecord-detail-pane{
+    height: 305px;
+  }
+}
+/*iphone6 plus*/
+@media (min-device-width : 414px) {
+  .datacenter-barChart-wrap{
+    height: 295px;
+  }
+  .runningRecord-detail-pane{
+    height: 340px;
+  }
+}
+.share-header-linear {
+  height: 220px;
+}
+@media (min-width: 375px){
+  .share-header-linear {
+    height: 220px;
+  }
+  .container {
+    margin-top: 220px;
+  }
+}
+@media (min-width: 768px) {
+  .container {width: 640px;}
+  .share-header-linear{
+    height:220px;
+  }
+  .container {
+    margin-top: 220px;
+  }
+}
+@media (min-width: 992px) {
+  .share-header-linear{
+    height:310px;
+  }
+  .container {
+    margin-top: 310px;
+  }
+}
+@media (min-width: 1200px) {
+  .share-header-linear{
+    height:385px;
+  }
+  .container {
+    margin-top: 385px;
+  }
+}
