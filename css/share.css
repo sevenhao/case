@@ -244,7 +244,7 @@ ul, menu, dir {
 }
 /*media 不同大小的设备时容器的宽度*/
 @media (min-width: 375px) {
-  .container {width: 100%;}
+  .container,.running-share-header {width: 100%;}
   .share-header-linear{
     width:100%;
     height:190px;
@@ -252,9 +252,10 @@ ul, menu, dir {
   .share-footer-wrap{
     width: 100%;
   }
+
 }
 @media (min-width: 768px) {
-  .container {width: 640px;}
+  .container,.running-share-header {width: 640px;}
   .share-header-linear{
     width:100%;
     height:190px;
@@ -264,7 +265,7 @@ ul, menu, dir {
   }
 }
 @media (min-width: 992px) {
-  .container {width: 640px;}
+  .container,.running-share-header {width: 640px;}
   .share-header-linear{
     width:100%;
     height:290px;
@@ -274,7 +275,7 @@ ul, menu, dir {
   }
 }
 @media (min-width: 1200px) {
-  .container {width: 640px;}
+  .container,.running-share-header {width: 640px;}
   .share-header-linear{
     width:100%;
     height:365px;

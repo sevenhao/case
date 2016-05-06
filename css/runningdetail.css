@@ -1,11 +1,6 @@
 /**
  * Created by qhao on 2016/5/3.
  */
-.share-header{
-  position: fixed;
-  top: 0;
-  left: 0;
-}
 .share-time {
   padding: 15px 20px 10px;
   font-size: 13px;
@@ -31,7 +26,6 @@ body{
 }
 .container {
   padding-bottom: 20px;
-  margin-top: 220px;
 }
 .runningRecord-barChart-title{
   /*margin: 0 5px;*/
@@ -208,32 +202,20 @@ body{
   .share-header-linear {
     height: 220px;
   }
-  .container {
-    margin-top: 220px;
-  }
 }
 @media (min-width: 768px) {
   .container {width: 640px;}
   .share-header-linear{
     height:220px;
   }
-  .container {
-    margin-top: 220px;
-  }
 }
 @media (min-width: 992px) {
   .share-header-linear{
     height:310px;
   }
-  .container {
-    margin-top: 310px;
-  }
 }
 @media (min-width: 1200px) {
   .share-header-linear{
     height:385px;
-  }
-  .container {
-    margin-top: 385px;
   }
 }
