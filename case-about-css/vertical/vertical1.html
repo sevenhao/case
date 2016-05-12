@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" name="viewport">
+  <title>竖向剧中</title>
+  <style type="text/css">
+    #wrapper {display:table;height: 50px;background: #e0e0e0;width: 50%;}
+    #cell {display:table-cell; vertical-align:middle;}
+
+    #content {
+      position:absolute;
+      top:50%;
+      height:240px;
+      margin-top:-120px; /* negative half of the height */
+      background: #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+<h3>方法一</h3>
+<div id="wrapper">
+  <p id="cell">Content goes here</p>
+</div>
+
+
+<h3>方法二</h3>
+<div id="content">Content goes here</div>
+
+</body>
+</html>
