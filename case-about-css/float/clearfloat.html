@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" name="viewport">
+  <title>大话浮动</title>
+  <style type="text/css">
+    body {
+      box-shadow: none;
+      background-color: #f4f6f8;
+      width: 100%;
+      padding-top: 3.45em;
+      font-family: "Helvetica Neue",Helvetica,Tahoma,Arial,STXihei,"Microsoft YaHei","微软雅黑",sans-serif;
+    }
+    .contain-content{
+      width: 80%;
+      margin: 0 auto;
+      padding: 20px;
+      min-height: 600px;
+      background: white;
+      margin-bottom: 80px;
+      box-shadow: 0 4px 10px rgba(0,0,0,.1);
+    }
+    .contain-content:before, .contain-content:after {
+      display: table;
+      content: "";
+      line-height: 0;
+    }
+    h2{
+      font-size: 24px;
+      margin: 20px 0;
+      text-align: center;
+      color: #555;
+    }
+    h3{
+      font-size: 18px;
+      margin: 20px 0;
+      color: #555;
+    }
+    div {
+      padding: 15px 20px;
+      font-size: 14px;
+      color: #333;
+    }
+    .left {
+      float: left;
+    }
+    .clear {
+      clear: both;
+    }
+    .wrap {
+      border: 1px solid red;
+      width: 600px;
+      margin: 30px auto 5px;
+      background: #f0f0f0;
+    }
+    .main {
+      height: 60px;
+      width: 50%;
+      background: #38BA9B;
+      color: #ffffff;
+      font-size: 16px;
+    }
+    .side {
+      width: 20%;
+      background: #F8B726;
+      color: #ffffff;
+      font-size: 16px;
+    }
+    .footer {
+      border: 1px solid #CCC;
+      background: #EEE;
+      width: 600px;
+      margin: 5px auto 30px;
+      font-size: 16px;
+    }
+    .explain{
+      width: 600px;
+      margin: 5px auto 30px;
+      font-size: 16px;
+      background: #ffecec;
+    }
+    .result{
+      font-size: 18px;
+      font-weight: bold;
+      color: red;
+    }
+    .innerElement{
+      background: #f0ffa7;
+      padding: 10px;
+    }
+    .clearfix:after {
+      clear: both;
+      content: ".";
+      display: block;
+      height: 0;
+      visibility: hidden;
+    }
+    .clearfix { *zoom:1; }
+
+
+    .box {
+      width: 300px;
+      background: #EEE;
+      margin: 50px auto;
+      padding: 0;
+    }
+    .main1 {
+      float: left;
+      background: pink;
+      height: 130px;
+      width: 100px;
+    }
+    .side1 {
+      margin-top: 100px;
+      background: #38BA9B;
+    }
+    .clearfix-1:after {
+      content: ".";
+      display: block;
+      height: 0;
+      visibility: hidden;
+      clear: both;
+    }
+
+
+    .clearfix-2:after {
+      clear: both;
+    }
+    .clearfix-2:after {
+      content: "";
+      display: table;
+    }
+
+
+    .clearfix-3:before, .clearfix-3:after {
+      content: "";
+      display: table;
+    }
+
+    .clearfix-3:after {
+      clear: both;
+    }
+
+    .clearfix-3:before, .clearfix-3:after {
+      content: "";
+      display: table;
+    }
+
+  </style>
+</head>
+<body>
+<div class="contain-content">
+  <h2>大话浮动</h2>
+
+  <h3 id="floatEx">一、浮动</h3>
+  <div class="content1">
+    <h4>浮动</h4>
+    <div class="wrap">
+      <div class="main left">左一float:left，问题：现代浏览器中无法把wrap撑高</div>
+      <div class="side left">左二float:left</div>
+    </div>
+
+    <span class="innerElement">我是内联元素，我的位置受到浮动的影响</span>
+    <div class="footer">我是块级元素，我的位置没有受到浮动的影响
+    </div>
+    <div class="explain">
+      <span class="result">结果:</span>
+      内联元素受到浮动的影响。块级元素位置没有受到浮动的影响，但是存在wrap高度塌陷的问题。
+    </div>
+  </div>
+
+  <h3 id="distinguish">二、闭合浮动 与 清除浮动 的区别</h3>
+  <div class="content1">
+    <h4>清除浮动</h4>
+    <div class="wrap">
+      <div class="main left">左一float:left，问题：现代浏览器中无法把wrap撑高</div>
+      <div class="side left">左二float:left</div>
+    </div>
+
+    <div class="footer clear">我是块级元素 clear:both <strong>清除浮动</strong>,
+      <br>虽然位置正确了,但是 wrap 的高度没变
+    </div>
+    <div class="explain">
+      <span class="result">结果:</span>
+      通过在footer上设置clear：both，清除浮动，footer位置正确，但是并不能解决wrap高度塌陷的问题。
+    </div>
+  </div>
+
+  <div class="content1">
+    <h4>闭合浮动</h4>
+    <div class="wrap clearfix">
+      <div class="main left">左一float:left后，自己闭合浮动了，所以footer不用再清除浮动了</div>
+      <div class="side left">左二float:left</div>
+    </div>
+
+    <div class="footer clear">div2：这次 通过在wrap添加 .clearfix ，通过.clearfix:after已经
+      <strong>闭合浮动</strong>
+    </div>
+    <div class="explain">
+      <span class="result">结果:</span>
+      通过在wrap添加 .clearfix ，通过.clearfix:after已经闭合浮动，不再出现wrap高度塌陷的问题。
+    </div>
+  </div>
+
+
+  <h3 id="clearFloat">三、闭合浮动的各种方法</h3>
+  <div id="clearFloat1" class="content1">
+    <h4>1）添加额外标签</h4>
+    <div class="wrap">
+      <div class="main left">左一float:left，添加空的div标签来清除浮动</div>
+      <div class="side left">左二float:left</div>
+      <div style="clear:both;"></div>
+    </div>
+
+    <div class="footer">浮动过后的footer块级框</div>
+    <div class="explain">
+      <span class="result">结果:</span>
+      通过添加额外标签清除浮动，布局排列正常
+    </div>
+  </div>
+
+  <div id="clearFloat2" class="content1">
+    <h4>2）使用 br标签和其自身的 html属性</h4>
+    <div class="wrap">
+      <div class="main left">左一float:left，使用 br标签和其自身的 html属性</div>
+      <div class="side left">左二float:left</div>
+      <br clear="all">
+    </div>
+
+    <div class="footer">浮动过后的footer块级框</div>
+    <div class="explain">
+      <span class="result">结果:</span>
+      通过添加br元素，并设置clear：all，可以清除浮动，布局排列正常
+    </div>
+  </div>
+
+  <div id="clearFloat3" class="content1">
+    <h4>3）父元素设置 overflow：hidden</h4>
+    <div class="wrap" style="overflow:hidden; *zoom:1;">
+      <div class="main left">左一float:left，父元素设置 overflow：hidden来清除浮动</div>
+      <div class="side left">左二float:left</div>
+    </div>
+
+    <div class="footer">浮动过后的footer块级框</div>
+    <div class="explain">
+      <span class="result">结果:</span>
+      通过给父元素添加overflow：hidden属性，可以清除浮动，布局排列正常
+    </div>
+  </div>
+
+  <div id="clearFloat4" class="content1">
+    <h4>4）父元素设置 overflow：auto 属性</h4>
+    <div class="wrap" style="overflow:hidden; *zoom:1;">
+      <div class="main left">左一float:left，父元素设置 overflow：auto来清除浮动</div>
+      <div class="side left">左二float:left</div>
+    </div>
+
+    <div class="footer">浮动过后的footer块级框</div>
+    <div class="explain">
+      <span class="result">结果:</span>
+      通过给父元素添加overflow：auto属性，可以清除浮动，布局排列正常
+    </div>
+  </div>
+
+  <div id="clearFloat5" class="content1">
+    <h4>6）父元素设置display:table</h4>
+    <div class="wrap" style="display:table;">
+      <div class="main left">左一float:left，父元素设置 display:table来清除浮动</div>
+      <div class="side left">左二float:left</div>
+    </div>
+
+    <div class="footer">浮动过后的footer块级框</div>
+    <div class="explain">
+      <span class="result">结果:</span>
+      通过给父元素添加display:table属性，可以清除浮动，布局排列正常
+    </div>
+  </div>
+
+  <h3 id="clearFloatGood">四、闭合浮动方法优化</h3>
+  <div class="box clearfix-1">
+    <div class="main1">
+      <pre>.main {
+      float:left;
+      }</pre>
+    </div>
+    <div class="side1">
+      <pre>.clearfix-1:after {
+          content: ".";
+          display: block;
+          height: 0;
+          visibility:hidden;
+          clear: both;
+          }
+      .clearfix-1 { *zoom: 1; } /* IE &lt; 8 */
+      </pre>
+      <strong>.box{ margin:50px auto;}</strong>
+    </div>
+  </div>
+
+  <div class="box clearfix-2">
+    <div class="main1">
+      <pre>.main {
+      float:left;
+      }</pre>
+    </div>
+    <div class="side1">
+      未添加:before伪元素,由于内部的.main float:left 创建了BFC,垂直边距发生叠加,变为100px
+    </div>
+  </div>
+
+
+  <div class="box clearfix-3">
+    <div class="main1">
+      <pre>.main {
+float:left;
+}</pre>
+    </div>
+    <div class="side1">
+      .side{margin-top:100px;}
+      添加了.clearfix-3:before之后,和上一个元素之间垂直距离为:50px
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
