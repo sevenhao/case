@@ -5,9 +5,9 @@ $(function(){
   var circleRadius = 150;//圆环大小
 
   var steps=true;
-  var sleep=false;
-  var running=false;
-  var status=false;
+  var sleep=true;
+  var running=true;
+  var status=true;
 
   initData(steps,sleep,status,running);
   function initData(steps,sleep,status,running){
