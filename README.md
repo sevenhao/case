@@ -7,4 +7,6 @@
  . 移动端柱状图
  [http://sevenhao.github.io/case/runningdetail.html]
  
+ . 移动端拆线图
+ [http://sevenhao.github.io/case/healthweekly.html]
  
