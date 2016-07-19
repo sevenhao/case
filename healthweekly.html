@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title></title>
+  <link rel="stylesheet" href="css/share.css">
+  <link rel="stylesheet" href="css/healthweekly.css">
+</head>
+<body>
+<div class="container" style="padding-bottom: 0px;">
+  <div class="healthweekly-header">健康周报</div>
+  <div class="healthweekly-content-bg">
+    <div class="healthweekly-header-mine">
+      <div class="healthweekly-mine-portrait-wrap" id="healthweekly-mine-portrait">
+      </div>
+      <div class="healthweekly-mine-info-wrap" id="healthweekly-mine-info">
+      </div>
+    </div>
+
+    <!-- 勋章-->
+    <div class="clear healthweekly-mine-medal-wrap">
+      <div class="healthweekly-mine-medal-title-wrap">
+        <hr>
+        <div class="healthweekly-mine-medal-title">勋章</div>
+        <hr>
+      </div>
+
+      <!-- 勋章列表-->
+      <div class="healthweekly-mine-medal-list">
+        <ul id="healthweekly-mine-medal">
+        </ul>
+      </div>
+    </div>
+
+    <!-- 步数-->
+    <div class="clear healthweekly-mine-steps-wrap">
+      <div class="healthweekly-steps-title-wrap">
+        <hr>
+        <div class="healthweekly-steps-title">步数</div>
+        <hr>
+      </div>
+
+      <div class="healthweekly-mine-steps-detail">
+        <div class="healthweekly-mine-steps-total">
+          <div class="healthweekly-mine-steps-thisweek">
+            步数<div class="healthweekly-mine-steps-thisweek-stepnum" id="healthweekly-mine-steps">
+            <div class="healthweekly-_unit">步</div>
+          </div>
+          </div>
+          <div class="healthweekly-mine-steps-thisweek" id="healthweekly-mine-steps-compared">
+          </div>
+        </div>
+        <ul class="healthweekly-mine-steps-detail-list">
+          <li>
+            <div class="healthweekly-mine-steps-detail-label">最高步数</div>
+            <div class="healthweekly-mine-steps-detail-data" id="myWeeklyInfo-stepInfo-most">
+            </div>
+          </li>
+          <li class="trainingtask-task-description-borderLeft">
+            <div class="healthweekly-mine-steps-detail-label">总距离</div>
+            <div class="healthweekly-mine-steps-detail-data" id="myWeeklyInfo-stepInfo-meleage">
+            </div>
+          </li>
+          <li class="trainingtask-task-description-borderLeft">
+            <div class="healthweekly-mine-steps-detail-label">累积消耗</div>
+            <div class="healthweekly-mine-steps-detail-data" id="myWeeklyInfo-stepInfo-calorie">
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 跑步-->
+    <div class="clear healthweekly-mine-steps-wrap  healthweekly-mine-running-wrap">
+      <div class="healthweekly-steps-title-wrap ">
+        <hr>
+        <div class="healthweekly-steps-title healthweekly-mine-running-bgcolor">跑步</div>
+        <hr>
+      </div>
+
+      <div class="healthweekly-mine-steps-detail">
+        <div class="healthweekly-mine-steps-total">
+          <div class="healthweekly-mine-steps-thisweek">
+            跑步<div class="healthweekly-mine-steps-thisweek-stepnum
+            healthweekly-mine-running-color" id="myWeeklyInfo-running-meleage">
+            <div class="healthweekly-_unit">公里</div>
+          </div>
+          </div>
+          <div class="healthweekly-mine-steps-thisweek" id="healthweekly-mine-running-compared">
+          </div>
+        </div>
+        <ul class="healthweekly-mine-steps-detail-list">
+          <li>
+            <div class="healthweekly-mine-steps-detail-label">跑步次数</div>
+            <div class="healthweekly-mine-steps-detail-data healthweekly-mine-running-color"
+                 id="myWeeklyInfo-running-times">
+            </div>
+          </li>
+          <li class="trainingtask-task-description-borderLeft">
+            <div class="healthweekly-mine-steps-detail-label">总距离</div>
+            <div class="healthweekly-mine-steps-detail-data healthweekly-mine-running-color"
+                 id="myWeeklyInfo-running-totalTime">
+            </div>
+          </li>
+          <li class="trainingtask-task-description-borderLeft">
+            <div class="healthweekly-mine-steps-detail-label">燃脂心率时长</div>
+            <div class="healthweekly-mine-steps-detail-data healthweekly-mine-running-color"
+              id="myWeeklyInfo-running-burningTime">
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 跑步tips-->
+    <div class="healthweekly-mine-tips-wrap">
+      <div class="healthweekly-mine-tips-parallelogram">
+        <div class="healthweekly-mine-tips-parallelogram-text">TIPS</div>
+      </div>
+      <div class="healthweekly-mine-tips">
+        <div class="healthweekly-mine-tips-text" id="myWeeklyInfo-runningTips"></div>
+      </div>
+    </div>
+
+
+    <!-- 睡眠-->
+    <div class="clear healthweekly-mine-sleep-wrap">
+      <div class="healthweekly-steps-title-wrap ">
+        <hr>
+        <div class="healthweekly-steps-title healthweekly-mine-sleep-bgcolor">睡眠</div>
+        <hr>
+      </div>
+
+      <div class="healthweekly-mine-steps-detail ">
+        <div class="healthweekly-mine-steps-total">
+          <div class="healthweekly-mine-steps-thisweek healthweekly-mine-sleep-text-color healthweekly-mine-sleep-thisweek"
+               id="myWeeklyInfo-sleep-average">
+          </div>
+          <div class="healthweekly-mine-steps-thisweek healthweekly-mine-sleep-text-color healthweekly-mine-sleep-lastweek"
+               id="healthweekly-sleep-compared">
+          </div>
+        </div>
+
+
+        <ul class="clear healthweekly-mine-steps-detail-list">
+          <li>
+            <div class="healthweekly-mine-steps-detail-label healthweekly-mine-sleep-text-color">平均睡眠评分</div>
+            <div class="healthweekly-mine-steps-detail-data healthweekly-mine-sleep-color"
+                 id="myWeeklyInfo-sleep-averageEvaluate"></div>
+          </li>
+          <li class="">
+            <div class="healthweekly-mine-steps-detail-label healthweekly-mine-sleep-text-color">最低评分</div>
+            <div class="healthweekly-mine-steps-detail-data healthweekly-mine-sleep-color"
+                 id="myWeeklyInfo-sleep-lowest"></div>
+          </li>
+          <li class="">
+            <div class="healthweekly-mine-steps-detail-label healthweekly-mine-sleep-text-color">最高评分</div>
+            <div class="healthweekly-mine-steps-detail-data healthweekly-mine-sleep-color"
+                 id="myWeeklyInfo-sleep-highest"></div>
+          </li>
+        </ul>
+
+        <ul class="clear healthweekly-mine-sleep-detail-list">
+          <li>
+            <div class="healthweekly-mine-steps-detail-label healthweekly-mine-sleep-text-color">平均入睡时间</div>
+            <div class="healthweekly-mine-steps-detail-data healthweekly-mine-sleep-color"
+                 id="myWeeklyInfo-sleep-sleepTime"></div>
+          </li>
+          <li class="">
+            <div class="healthweekly-mine-steps-detail-label healthweekly-mine-sleep-text-color">平均起床时间</div>
+            <div class="healthweekly-mine-steps-detail-data healthweekly-mine-sleep-color"
+                 id="myWeeklyInfo-sleep-getUpTime"></div>
+          </li>
+          <li class="">
+            <div class="healthweekly-mine-steps-detail-label healthweekly-mine-sleep-text-color">平均深睡眠时长</div>
+            <div class="healthweekly-mine-steps-detail-data healthweekly-mine-sleep-color"
+                 id="myWeeklyInfo-sleep-deepSleep"></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <!-- 睡眠tips-->
+    <div class="healthweekly-mine-tips-wrap healthweekly-mine-sleeptips-wrap">
+      <div class="healthweekly-mine-tips-parallelogram">
+        <div class="healthweekly-mine-tips-parallelogram-text">TIPS</div>
+      </div>
+      <div class="healthweekly-mine-tips">
+        <div class="healthweekly-mine-tips-text" id="myWeeklyInfo-sleepTips"></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<script src="./js/jquery-2.1.3.min.js"></script>
+<script src="./js/healthweekly.js"></script>
+</body>
+</html>

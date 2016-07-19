@@ -1,0 +1,656 @@
+/**
+ * Created by qhao on 2016/6/13.
+ */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, i, u, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, fieldset, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font: inherit;
+  font-size: 100%;
+}
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+* {
+  font-family: Arial;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+ul{
+  list-style: none;
+}
+li, img, label, input {
+  vertical-align: middle;
+  display: list-item;
+}
+.healthweekly-header{
+  height: 45px;
+  line-height: 45px;
+  width: 100%;
+  text-align: center;
+  background: #38BA9B;
+  color: #ffffff;
+  font-size: 22px;
+}
+.healthweekly-content-bg{
+  width: 100%;
+  height:1180px;
+  background: url(../images/healthweekly/drawable-xhdpi/bg@2x.png) no-repeat;
+  background-size: 100% 100%;
+}
+.healthweekly-header-mine{
+  padding-top: 15px;
+  padding-left: 20px;
+  height:4.6%;
+}
+.healthweekly-mine-portrait-wrap{
+  height: 40px;
+  width: 40px;
+  float: left;
+}
+.healthweekly-mine-info-wrap{
+  height: 40px;
+  float: left;
+  margin-left: 6px;
+}
+.healthweekly-mine-portrait{
+  height: 40px;
+  width: 40px;
+    border-radius: 50%;
+}
+.healthweekly-mine-info-nickname,.healthweekly-mine-info-time{
+  height: 20px;
+  line-height: 20px;
+  /*font-size: 13px;*/
+  font-size: 0.813em;
+  color: #4d4d4d;
+}
+.healthweekly-mine-info-nickname{
+  width: 60px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #38BA9B;
+}
+.healthweekly-mine-medal-wrap{
+  margin-top: 6%;
+  padding: 0 8%;
+  height: 13%;
+}
+.healthweekly-mine-medal-title-wrap{
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+}
+.healthweekly-mine-medal-title{
+  width: 23%;
+  display: inline-block;
+  text-align: center;
+  background: #F8B726;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  /*font-size: 13px;*/
+  font-size: 0.813em;
+  color: #ffffff;
+  margin: 0 -4px;
+}
+.healthweekly-mine-medal-title-wrap hr {
+  width: 37%;
+  display: inline-block;
+  color: #F8B726;
+  background: #F8B726;
+  border: 0;
+  height: 2px;
+  margin: 0;
+}
+.healthweekly-mine-medal-list{
+  margin-top: 15px;
+  width: 100%;
+  /*font-size: 10px;*/
+  font-size: 0.625em;
+  color: #4d4d4d;
+}
+.healthweekly-mine-medal-list li{
+  float: left;
+  width: 33.33%;
+  text-align: center;
+}
+.healthweekly-medal-step-active{
+  background: url(../images/healthweekly/drawable-xhdpi/medal_energy_get@2x.png) no-repeat;
+  background-size: 91px 91px;
+}
+.healthweekly-medal-step{
+  background: url(../images/healthweekly/drawable-xhdpi/medal_energy_no@2x.png) no-repeat;
+  background-size: 91px 91px;
+}
+.healthweekly-medal-running-active{
+  background: url(../images/healthweekly/drawable-xhdpi/medal_sport_get@2x.png) no-repeat;
+  background-size: 91px 91px;
+}
+.healthweekly-medal-running{
+  background: url(../images/healthweekly/drawable-xhdpi/medal_sport_no@2x.png) no-repeat;
+  background-size: 91px 91px;
+}
+.healthweekly-medal-sleep-active{
+  background: url(../images/healthweekly/drawable-xhdpi/medal_sleep_get@2x.png) no-repeat;
+  background-size: 91px 91px;
+}
+.healthweekly-medal-sleep{
+  background: url(../images/healthweekly/drawable-xhdpi/medal_sleep_no@2x.png) no-repeat;
+  background-size: 91px 91px;
+}
+.healthweekly-mine-medal{
+  width: 75px;
+  height: 75px;
+  margin: 0 auto;
+  background-size: 75px 75px;
+}
+.healthweekly-mine-steps-wrap{
+  margin-top: 5px;
+  height: 11.6%;
+  padding: 0 8%;
+}
+.healthweekly-steps-title-wrap{
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+}
+.healthweekly-steps-title-wrap hr{
+  width: 37%;
+  display: inline-block;
+  color: #38BA9B;
+  background: #38BA9B;
+  border: 0;
+  height: 2px;
+  margin: 0;
+}
+.healthweekly-steps-title{
+  width: 23%;
+  display: inline-block;
+  text-align: center;
+  background: #38BA9B;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  /*font-size: 13px;*/
+  font-size: 0.813em;
+  color: #ffffff;
+  margin: 0 -4px;
+}
+.healthweekly-mine-steps-detail{
+  margin-top: 15px;
+  width: 100%;
+}
+.healthweekly-mine-steps-total{
+  margin: 0 auto;
+}
+.healthweekly-mine-steps-detail li{
+  float: left;
+  width: 33.33%;
+  text-align: center;
+}
+.healthweekly-mine-steps-thisweek{
+  display: inline-block;
+  width: 48%;
+  margin: 0;
+  text-align: center;
+  /*font-size: 13px;*/
+  font-size: 0.613em;
+  color: #4d4d4d;
+}
+.trainingtask-task-description-borderLeft {
+  border-left: 1px solid #D1D1D1;
+}
+.healthweekly-mine-steps-thisweek-stepnum{
+  display: inline-block;
+  color: #38BA9B;
+  /*font-size: 20px;*/
+  font-size: 1.538em;
+  margin: 0 -1px;
+}
+.healthweekly-_unit{
+  display: inline-block;
+  /*font-size: 13px;*/
+  font-size: 0.661em;
+  color: #4d4d4d;
+  margin: 0;
+}
+.healthweekly-mine-steps-icon{
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-size: 12px 12px;
+}
+.healthweekly-mine-steps-up{
+  background: url(../images/healthweekly/drawable-xhdpi/icon_increase_steps@2x.png) no-repeat;
+  background-size: 12px 12px;
+}
+.healthweekly-mine-steps-down{
+  background: url(../images/healthweekly/drawable-xhdpi/icon_reduce_steps@2x.png) no-repeat;
+  background-size: 12px 12px;
+}
+
+.healthweekly-mine-runing-up{
+  background: url(../images/healthweekly/drawable-xhdpi/icon_increase_run@2x.png) no-repeat;
+  background-size: 12px 12px;
+}
+.healthweekly-mine-runing-down{
+  background: url(../images/healthweekly/drawable-xhdpi/icon_reduce_run@2x.png) no-repeat;
+  background-size: 12px 12px;
+}
+
+.healthweekly-mine-sleep-up{
+  background: url(../images/healthweekly/drawable-xhdpi/icon_increase_sleep@2x.png) no-repeat;
+  background-size: 12px 12px;
+}
+.healthweekly-mine-sleep-down{
+  background: url(../images/healthweekly/drawable-xhdpi/icon_reduce_sleep@2x.png) no-repeat;
+  background-size: 12px 12px;
+}
+.healthweekly-mine-steps-detail-list{
+  width: 100%;
+  margin-top: 15px;
+}
+.healthweekly-mine-steps-detail-label{
+  height: 10px;
+  line-height: 10px;
+  /*font-size: 10px;*/
+  font-size:0.625em;
+  color: #4d4d4d;
+}
+.healthweekly-mine-steps-detail-data{
+  height: 16px;
+  line-height: 16px;
+  /*font-size: 16px;*/
+  font-size:1.23em;
+  color: #38BA9B;
+  margin-top: 10px;
+}
+.healthweekly-mine-steps-detail-data div{
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  height: 16px;
+  line-height: 16px;
+}
+.healthweekly-mine-steps-detail-time{
+  /*margin-left:5px;*/
+  /*font-size: 10px;*/
+  font-size:0.508em;
+}
+.healthweekly-_unit_10{
+  display: inline-block;
+  /*font-size: 10px;*/
+  font-size:0.508em;
+  color: #4d4d4d;
+  margin: 0;
+}
+.healthweekly-mine-running-wrap hr{
+  background: #87D137;
+  color: #87D137;
+}
+.healthweekly-mine-running-color{
+  color: #87D137;
+}
+.healthweekly-mine-running-bgcolor{
+  background: #87D137;
+}
+.healthweekly-mine-tips-wrap{
+  /*height:5.5% ;*/
+  padding: 0 8%;
+}
+.healthweekly-mine-tips{
+  width: 100%;
+  /*height: 100%;*/
+  margin: -10px 0 0;
+  padding:15px 21px 15px 16px;
+  background: #EBEBEB;
+  /*font-size: 10px;*/
+  font-size: 0.508em;
+  color: #4d4d4d;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.healthweekly-mine-tips-text{
+  /*height: 25px;*/
+  line-height: 15px;
+}
+.healthweekly-mine-tips-parallelogram {
+  width: 35px;
+  height: 13px;
+  -webkit-transform: skew(20deg);
+  -moz-transform: skew(20deg);
+  -o-transform:skew(20deg);
+  -ms-transform:skew(20deg);
+  transform:skew(20deg);
+  background: #38BA9B;
+  margin:-8px 0 0 5px;
+  color: #ffffff;
+}
+.healthweekly-mine-tips-parallelogram-text{
+  height: 13px;
+  line-height: 13px;
+  -webkit-transform: skew(-20deg);
+  -moz-transform: skew(-20deg);
+  -o-transform:skew(-20deg);
+  -ms-transform:skew(-20deg);
+  transform:skew(-20deg);
+  background: none;
+  /*font-size: 10px;*/
+  font-size: 0.508em;
+  margin:-8px 0 0 5px;
+}
+
+.healthweekly-mine-sleep-wrap{
+  margin-top: 43%;
+  width: 100%;
+  height: 16.4%;
+  padding: 0 8%;
+}
+
+.healthweekly-mine-sleep-wrap hr{
+  background: #00A1D9;
+  color: #00A1D9;
+}
+.healthweekly-mine-sleep-color{
+  color: #00A1D9;
+}
+.healthweekly-mine-sleep-bgcolor{
+  background: #00A1D9;
+}
+.healthweekly-mine-sleep-text-color{
+  color: #ffffff;
+}
+.healthweekly-mine-sleep-num{
+  display: inline-block;
+}
+.healthweekly-mine-sleep-thisweek{
+  width: 48%;
+}
+.healthweekly-mine-sleep-lastweek{
+  width: 48%;
+}
+.healthweekly-mine-sleep-detail-list{
+  width: 100%;
+  padding: 23px 0 0;
+}
+.healthweekly-mine-sleep-detail-list li{
+  float: left;
+  width: 33.33%;
+  text-align: center;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio : 2.5){
+  .healthweekly-content-bg{
+    background: url(../images/healthweekly/drawable-xxhdpi/bg@3x.png) no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .healthweekly-medal-step-active{
+    background: url(../images/healthweekly/drawable-xxhdpi/medal_energy_get@3x.png) no-repeat;
+    background-size: 91px 91px;
+  }
+  .healthweekly-medal-step{
+    background: url(../images/healthweekly/drawable-xxhdpi/medal_energy_no@3x.png) no-repeat;
+    background-size: 91px 91px;
+  }
+  .healthweekly-medal-running-active{
+    background: url(../images/healthweekly/drawable-xxhdpi/medal_sport_get@3x.png) no-repeat;
+    background-size: 91px 91px;
+  }
+  .healthweekly-medal-running{
+    background: url(../images/healthweekly/drawable-xxhdpi/medal_sport_no@3x.png) no-repeat;
+    background-size: 91px 91px;
+  }
+  .healthweekly-medal-sleep-active{
+    background: url(../images/healthweekly/drawable-xxhdpi/medal_sleep_get@3x.png) no-repeat;
+    background-size: 91px 91px;
+  }
+  .healthweekly-medal-sleep{
+    background: url(../images/healthweekly/drawable-xxhdpi/medal_sleep_no@3x.png) no-repeat;
+    background-size: 91px 91px;
+  }
+
+  .healthweekly-mine-steps-up{
+    background: url(../images/healthweekly/drawable-xxhdpi/icon_increase_steps@3x.png) no-repeat;
+    background-size: 12px 12px;
+  }
+  .healthweekly-mine-steps-down{
+    background: url(../images/healthweekly/drawable-xxhdpi/icon_reduce_steps@3x.png) no-repeat;
+    background-size: 12px 12px;
+  }
+
+  .healthweekly-mine-runing-up{
+    background: url(../images/healthweekly/drawable-xxhdpi/icon_increase_run@3x.png) no-repeat;
+    background-size: 12px 12px;
+  }
+  .healthweekly-mine-runing-down{
+    background: url(../images/healthweekly/drawable-xxhdpi/icon_reduce_run@3x.png) no-repeat;
+    background-size: 12px 12px;
+  }
+
+  .healthweekly-mine-sleep-up{
+    background: url(../images/healthweekly/drawable-xxhdpi/icon_increase_sleep@3x.png) no-repeat;
+    background-size: 12px 12px;
+  }
+  .healthweekly-mine-sleep-down{
+    background: url(../images/healthweekly/drawable-xxhdpi/icon_reduce_sleep@3x.png) no-repeat;
+    background-size: 12px 12px;
+  }
+}
+@media (min-device-width : 320px) and (min-device-height: 480px){
+  .healthweekly-mine-medal-wrap{
+    margin-top: 6%;
+    padding: 0 6%;
+  }
+  .healthweekly-mine-steps-wrap{
+    margin-top: 4px;
+    padding: 0 6%;
+  }
+  .healthweekly-mine-tips-wrap{
+    /*height:5.5% ;*/
+    padding: 0 6%;
+  }
+
+  .healthweekly-mine-medal-list {
+    margin-top: 10px;
+  }
+  .healthweekly-mine-medal {
+    width: 64px;
+    height: 64px;
+    background-size: 64px 64px;
+  }
+
+  .healthweekly-mine-steps-detail,.healthweekly-mine-steps-detail-list {
+    margin-top: 12px;
+  }
+  .healthweekly-mine-steps-detail-data {
+    height: 15px;
+    line-height: 15px;
+    margin-top: 8px;
+  }
+  .healthweekly-mine-sleep-detail-list{
+    padding: 12px 0 0;
+  }
+  .healthweekly-mine-sleep-wrap {
+    padding: 0 5%;
+  }
+
+  .healthweekly-mine-steps-thisweek{
+    font-size: 10px;
+  }
+}
+@media (min-device-width : 320px) and (min-device-height: 520px){
+  .healthweekly-mine-medal-wrap{
+    margin-top: 6%;
+    padding: 0 6%;
+  }
+  .healthweekly-mine-steps-wrap{
+    margin-top: 4px;
+    padding: 0 6%;
+  }
+  .healthweekly-mine-tips-wrap{
+    /*height:5.5% ;*/
+    padding: 0 6%;
+  }
+
+  .healthweekly-mine-medal-list {
+    margin-top: 10px;
+  }
+  .healthweekly-mine-medal {
+    width: 64px;
+    height: 64px;
+    background-size: 64px 64px;
+  }
+
+  .healthweekly-mine-steps-detail,.healthweekly-mine-steps-detail-list {
+    margin-top: 12px;
+  }
+  .healthweekly-mine-steps-detail-data {
+    height: 15px;
+    line-height: 15px;
+    margin-top: 8px;
+  }
+  .healthweekly-mine-sleep-detail-list{
+    padding: 12px 0 0;
+  }
+}
+@media (min-device-width : 320px) and (min-device-height: 568px){
+  .healthweekly-mine-medal-wrap{
+    margin-top: 6%;
+    padding: 0 6%;
+  }
+  .healthweekly-mine-steps-wrap{
+    margin-top: 4px;
+    padding: 0 6%;
+  }
+  .healthweekly-mine-tips-wrap{
+    /*height:5.5% ;*/
+    padding: 0 6%;
+  }
+  .healthweekly-mine-medal-list {
+    margin-top: 10px;
+  }
+  .healthweekly-mine-medal {
+    width: 64px;
+    height: 64px;
+    background-size: 64px 64px;
+  }
+
+  .healthweekly-mine-steps-detail,.healthweekly-mine-steps-detail-list {
+    margin-top: 12px;
+  }
+  .healthweekly-mine-steps-detail-data {
+    height: 15px;
+    line-height: 15px;
+    margin-top: 8px;
+  }
+  .healthweekly-mine-sleep-detail-list{
+    padding: 12px 0 0;
+  }
+}
+
+@media (min-device-width : 360px) and (min-device-height: 640px){
+  .healthweekly-mine-medal-wrap{
+    margin-top: 6%;
+    padding: 0 8%;
+  }
+  .healthweekly-mine-steps-wrap{
+    margin-top: 5px;
+    padding: 0 8%;
+  }
+  .healthweekly-mine-tips-wrap{
+    /*height:5.5% ;*/
+    padding: 0 8%;
+  }
+  .healthweekly-mine-medal-list {
+    margin-top: 15px;
+  }
+  .healthweekly-mine-medal {
+    width: 75px;
+    height: 75px;
+    background-size: 75px 75px;
+  }
+
+  .healthweekly-mine-steps-detail,.healthweekly-mine-steps-detail-list {
+    margin-top: 15px;
+  }
+  .healthweekly-mine-steps-detail-data {
+    height: 16px;
+    line-height: 16px;
+    margin-top: 10px;
+  }
+  .healthweekly-mine-sleep-detail-list{
+    padding: 23px 0 0;
+  }
+  .healthweekly-mine-sleep-wrap {
+    margin-top: 43%;
+    width: 100%;
+    height: 16.4%;
+    padding: 0 8%;
+  }
+}
+
+/*iphone 6*/
+@media (min-device-width : 375px) and (min-device-height: 667px){
+  .healthweekly-mine-medal-wrap{
+    margin-top: 6%;
+    padding: 0 8%;
+  }
+  .healthweekly-mine-steps-wrap{
+    margin-top: 5px;
+    padding: 0 8%;
+  }
+  .healthweekly-mine-tips-wrap{
+    /*height:5.5% ;*/
+    padding: 0 8%;
+  }
+
+  .healthweekly-mine-medal-list {
+    margin-top: 15px;
+  }
+  .healthweekly-mine-medal {
+    width: 75px;
+    height: 75px;
+    background-size: 75px 75px;
+  }
+
+  .healthweekly-mine-steps-detail,.healthweekly-mine-steps-detail-list {
+    margin-top: 15px;
+  }
+  .healthweekly-mine-steps-detail-data {
+    height: 16px;
+    line-height: 16px;
+    margin-top: 10px;
+  }
+  .healthweekly-mine-sleep-detail-list{
+    padding: 23px 0 0;
+  }
+}
+
+@media (min-device-width : 412px) and (min-device-height: 708px){
+
+}
+
+
+/*iphone6 plus*/
+@media (min-device-width : 414px) and (min-device-height: 736px) {
+}

@@ -22,7 +22,7 @@
   background: transparent;
 }
 body{
-  background-color: #ffffff;
+  background-color: #f5f5f5;
 }
 .container {
   padding-bottom: 20px;
@@ -34,6 +34,7 @@ body{
   margin-bottom: -10px;
   font-size: 13px;
   color: #4D4D4D;
+  background: #ffffff;
 }
 .runningRecord-barChart-title hr{
   width: 38%;
@@ -105,7 +106,7 @@ body{
 }
 
 .runningRecord-detail-pane{
-  margin-top: 15px;
+  padding-top: 15px;
   background: #ffffff;
   height: 300px;
 }
@@ -152,6 +153,85 @@ body{
   line-height: 23px;
   color: #4D4D4D;
 }
+
+.runningRecord-rate-wrap{
+  background: #ffffff;
+  margin-top: 15px;
+  padding: 12px 24px 17px 10px;
+  /*margin-bottom: 15px;*/
+}
+.trainingtask-task-description-borderLeft{
+  border-left: 1px solid #D1D1D1;
+}
+.runningRecord-rate-canvas-title,.runningRecord-rate-time-title{
+  font-size: 13px;
+  color: #4d4d4d;
+}
+.runningRecord-rate-canvas-unit{
+  font-size: 10px;
+  color: #808080;
+}
+.runningRecord-rate-time-title{
+  margin: 14px 0;
+}
+.runningRecord-rate-time-wrap li{
+  float: left;
+  width: 33.33%;
+  text-align: center;
+}
+.runningRecord-rate-buring-time{
+  font-size: 1.4em;
+  color: #38BA9B;
+  margin: 2px 0;
+}
+.runningRecord-rate-aerobic-time{
+  font-size: 1.4em;
+  color: #F8B726;
+  margin: 2px 0;
+}
+.runningRecord-rate-anaerobic-time{
+  font-size: 1.4em;
+  color: #F2821E;
+  margin: 2px 0;
+}
+.runningRecord-rate-icon{
+  width: 43px;
+  height: 13px;
+  margin: 0 auto;
+  background-size: 43px 13px;
+}
+.runningRecord-rate-buring-icon{
+  background: url(../images/running/drawable-xhdpi/line_heart_1@2x.png) no-repeat;
+  background-size: 43px 13px;
+}
+.runningRecord-rate-aerobic-icon{
+  background: url(../images/running/drawable-xhdpi/line_heart_2@2x.png) no-repeat;
+  background-size: 43px 13px;
+}
+.runningRecord-rate-anaerobic-icon{
+  background: url(../images/running/drawable-xhdpi/line_heart_3@2x.png) no-repeat;
+  background-size: 43px 13px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio : 2.5){
+  .runningDetail-detail-timeIcon{
+    width: 24px;
+    height: 24px;
+    background: url("../images/running/drawable-xxhdpi/time@3x.png") 0 0 no-repeat;
+    background-size: 24px 24px;
+  }
+  .runningRecord-rate-buring-icon{
+    background: url(../images/running/drawable-xxhdpi/line_heart_1@3x.png) no-repeat;
+    background-size: 43px 13px;
+  }
+  .runningRecord-rate-aerobic-icon{
+    background: url(../images/running/drawable-xxhdpi/line_heart_2@3x.png) no-repeat;
+    background-size: 43px 13px;
+  }
+  .runningRecord-rate-anaerobic-icon{
+    background: url(../images/running/drawable-xxhdpi/line_heart_3@3x.png) no-repeat;
+    background-size: 43px 13px;
+  }
+}
 @media (min-device-width : 320px) and (min-device-height: 520px){
   .runningRecord-barChart-wrap{
     height: 212px;
@@ -168,7 +248,7 @@ body{
     height: 275px;
   }
 }
-@media (min-device-width : 360px) and (min-device-height: 621px) and (max-device-height: 640px){
+@media (min-device-width : 360px){
   .runningRecord-barChart-wrap{
     height: 260px;
   }
@@ -218,4 +298,11 @@ body{
   .share-header-linear{
     height:385px;
   }
+}
+.clearfix:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
 }

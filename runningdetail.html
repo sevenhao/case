@@ -48,9 +48,41 @@
     </div>
   </div>
 
+  <div class="runningRecord-rate-wrap">
+    <div class="runningRecord-rate-canvas-title">心率波动图
+      <span class="runningRecord-rate-canvas-unit">（次/分钟）</span>
+    </div>
+    <div>
+      <canvas id="runningRate" width="380"
+              style="background:#ffffff;padding: 0 0 5px 0;">
+        Your browser does not support HTML5 Canvas
+      </canvas>
+    </div>
+    <div class="runningRecord-rate-time-title">心率区域时间</div>
+    <div class="runningRecord-rate-time-wrap">
+      <ul class="clearfix">
+        <li>
+          <div class="runningRecord-rate-canvas-unit">燃脂心率</div>
+          <div class="runningRecord-rate-buring-time" id="distinguishData-burning"></div>
+          <div class="runningRecord-rate-icon runningRecord-rate-buring-icon"></div>
+        </li>
+        <li class="trainingtask-task-description-borderLeft">
+          <div class="runningRecord-rate-canvas-unit">有氧心率</div>
+          <div class="runningRecord-rate-aerobic-time" id="distinguishData-aerobic"></div>
+          <div class="runningRecord-rate-icon runningRecord-rate-aerobic-icon"></div>
+        </li>
+        <li class="trainingtask-task-description-borderLeft">
+          <div class="runningRecord-rate-canvas-unit">无氧心率</div>
+          <div class="runningRecord-rate-anaerobic-time" id="distinguishData-anaerobi"></div>
+          <div class="runningRecord-rate-icon runningRecord-rate-anaerobic-icon"></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
   <div class="runningRecord-barChart-title">
     <hr>
-    <div>详细数据</div>
+    <div>跑步详情</div>
     <hr>
   </div>
   <div class="runningRecord-detail-pane">
